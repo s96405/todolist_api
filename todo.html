@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/todo.css">
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="./img/logo_lg.svg">
+        <div class="user">
+            <p class="user_name"></p>
+            <button class="btn-logout">登出</button>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="todo-input">
+            <input type="text" class="input" placeholder="新增待辦事項">
+            <button class="btn-add">＋</button>
+        </div>
+        
+        <div class="tabs">
+            <button class="active all">全部</button>
+            <button class="pending">待完成</button>
+            <button class="completed">已完成</button>
+        </div>
+
+        
+        <ul class="todo-list">
+                
+        </ul>
+        <div class="todo-footer">
+            <div class="footer-item">
+                <p id="completed-count"></p>
+                <button id="clear-completed">清除已完成項目</button>
+            </div>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/todo.js"></script>
+    
+</body>
+</html>
