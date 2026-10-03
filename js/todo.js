@@ -39,6 +39,7 @@ logout.addEventListener('click', () => {
 
 //新增待辦事項
 add.addEventListener('click', () => {
+    
     if (input.value === '') {
         Swal.fire({
             icon: 'error',
@@ -47,6 +48,7 @@ add.addEventListener('click', () => {
         })
         return;
     }
+    add.disabled = true;
     let data = {
         "todo": {
             "content": input.value
@@ -60,6 +62,7 @@ add.addEventListener('click', () => {
                 text: '待辦事項已新增！'
             }).then(() => {
                 getTodo();
+                add.disabled = false;
             })
         })
         .catch(err => {
@@ -68,6 +71,7 @@ add.addEventListener('click', () => {
                 title: '新增失敗',
                 text: '請稍後再試！'
             })
+            add.disabled = false;
         })
 })
 getTodo()
